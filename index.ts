@@ -1,27 +1,22 @@
 import { qntDados } from "./functions/qntDados";
 import { At } from './functions/at'
-import { N } from "./functions/N";
+import { K } from "./functions/K";
+import { H } from "./functions/H";
 
 
-const dados = [672.2, 669.2, 669.8, 672.2, 662.7, 661.3, 672.2, 662.4, 663.9, 672.6, 661.3, 667.2, 669.2, 667.2, 665.1, 668.4, 672.2, 662.7, 861.3, 668.4, 666.5, 672.6, 670.5, 669.2, 662.4, 671.3, 869.2, 672.2, 665.1, 671.3, 672.2, 667.2, 672.2, 674.2, 672.6, 667.2, 673.6, 661.3, 672.6, 670.5, 673.6, 662.7, 670.5, 674.2, 672.2, 670.5, 661.3, 673.1, 672.2, 671.3, 665.1, 674.2, 672.6, 673.6, 669.8, 673.6, 667.2, 673.1, 672.2, 673.1, 668.4, 672.2, 867.2, 666.5, 672.2, 673.1, 663.9, 669.8, 671.3, 661.3, 670.5, 672.6
+const dados = [
+    150, 150, 150, 151, 152, 153, 156, 156, 156, 158,
+    158, 158, 160, 160, 160, 161, 161, 161, 162, 162, 162, 163, 163, 163, 163, 166, 166, 167, 167, 167, 167, 167, 168, 168, 168, 168, 168, 168, 169, 170, 170, 170, 170, 170, 170, 171, 172, 172, 172, 172, 173, 173, 173, 174, 174, 174, 174, 175, 175, 175, 176, 176, 176, 178, 179, 179, 179, 181, 182, 182
 ]
 const dadosOrdenados = dados.sort()
-const n = N(dadosOrdenados)
+const k = K(dadosOrdenados)
 const at = At(dadosOrdenados)
+const h = H(at, k)
 
 console.table(qntDados(dadosOrdenados));
-console.log(at);
-console.log(`total de linhas ${n}`);
-
-
-/*
-0,01 À 0,49 => APROXIMAÇÃO PARA MENOS
-
-0,50 À 0,99 => APROXIMAÇÃO PARA MAIS
-*/
-// qnt linhas= k
-// at = min-max
-// h = At/k = 42/9 ≅ 4,67 ≅ 5
+console.log(`at = ${at}`);
+console.log(`total de linhas = ${k}`);
+console.log(`h = ${h}`);
 
 // pmi
 // fi
