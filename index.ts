@@ -2,6 +2,7 @@ import { qntDados } from "./functions/qntDados";
 import { At } from './functions/at'
 import { K } from "./functions/K";
 import { H } from "./functions/H";
+import { CM } from "./functions/cm/CM";
 
 
 const dados = [
@@ -12,11 +13,13 @@ const dadosOrdenados = dados.sort()
 const k = K(dadosOrdenados)
 const at = At(dadosOrdenados)
 const h = H(at, k)
+const cm = CM(dadosOrdenados)
 
 console.table(qntDados(dadosOrdenados));
 console.log(`at = ${at}`);
 console.log(`total de linhas = ${k}`);
 console.log(`h = ${h}`);
+//console.log(cm);
 
 // pmi
 // fi
