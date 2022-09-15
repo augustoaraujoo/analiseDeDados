@@ -13,13 +13,13 @@ const dadosOrdenados = dados.sort()
 const k = K(dadosOrdenados)
 const at = At(dadosOrdenados)
 const h = H(at, k)
-const cm = CM(dadosOrdenados)
+const cm = CM(dadosOrdenados, h)
 
-console.table(qntDados(dadosOrdenados));
-console.log(`at = ${at}`);
-console.log(`total de linhas = ${k}`);
-console.log(`h = ${h}`);
-//console.log(cm);
+//console.table(qntDados(dadosOrdenados));
+//console.log(`at = ${at}`);
+//console.log(`total de linhas = ${k}`);
+//console.log(`h = ${h}`);
+console.log(cm);
 
 // pmi
 // fi
