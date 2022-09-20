@@ -18,8 +18,8 @@ const cm = CM(dadosOrdenados, h)
 //console.table(qntDados(dadosOrdenados));
 //console.log(`at = ${at}`);
 //console.log(`total de linhas = ${k}`);
-//console.log(`h = ${h}`);
-console.log(cm);
+console.log(`h = ${h}`);
+//console.log(cm);
 
 // pmi
 // fi

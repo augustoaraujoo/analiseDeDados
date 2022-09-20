@@ -4,13 +4,23 @@ export const CM = (dadosOrdenados: Array<number>, h: any) => {
     let H = Number(h)
     H.toFixed(1)
     let calcH = H + dadosOrdenados[0];
-    let hastag = []
-    for (let i in dadosOrdenados) {
-        if (dadosOrdenados[i] <= calcH) {
-            hastag.push(dadosOrdenados[i])
-            continue;
+    let array: Array<number> = []
+    let outrosArray: Array<number> = []
+
+
+    dadosOrdenados.forEach((element: any, index: number) => {
+        outrosArray.push(element)
+        if (element <= calcH) {
+            const existsNums = array.push(element);
+            // outrosArray remover os items do array
+            outrosArray.splice(0, existsNums)
+            // ja removi os items do array principal 
+            const last = array.at(-1);
+            const newH = Number(last) + Number(H)
         }
-    }
-    console.log(` de ${dadosOrdenados[0]} até ${calcH} foram ${hastag.length} classes ${hastag} ${hastag.at(-1)}`);
+    })
+
+    console.log(array);
+    console.log(outrosArray);
 
 }
